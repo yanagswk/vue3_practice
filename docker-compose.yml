@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node14:
+    build: .
+    container_name: node14
+    working_dir: /frontend
+    ports:
+      - "8080:8080"
+    tty: true
+    volumes:
+      - ./frontend:/frontend
+    # environment:
+    # - CHOKIDAR_USEPOLLING=true  # ホットリロード有効化
