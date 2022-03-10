@@ -1,11 +1,11 @@
-<template>
+<!-- <template>
   <div id="nav">
     <Header />
     <router-view />
   </div>
-</template>
+</template> -->
 
-<script lang="ts">
+<!-- <script lang="ts">
 import Header from "@/components/shared/Header.vue";
 export default {
   name: "App",
@@ -36,4 +36,26 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-</style>
+</style> -->
+
+<script setup lang="ts">
+import AppNavi, { MenuItem } from "@/components/TodoList/AppNavi.vue";
+
+// メニュー設定
+const menuItems: MenuItem[] = [
+  {
+    type: "heading",
+    title: "Main",
+  },
+  {
+    type: "menu",
+    title: "ToDo",
+    icon: "fa-list",
+    url: "/todo",
+  },
+];
+</script>
+
+<template>
+  <AppNavi title="Todo App" :menu-items="menuItems"></AppNavi>
+</template>

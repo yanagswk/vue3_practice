@@ -2,12 +2,15 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Gallary from "../views/Gallary.vue";
 import TodoList from "../views/TodoList.vue";
+import NotFound from "../components/NotFound.vue";
+import AppHome from "../views/AppHome.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    // name: "Home",
+    // component: Home,
+    component: AppHome,
   },
   {
     path: "/gallary",
@@ -21,6 +24,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/todo",
     name: "Todo",
     component: TodoList,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    component: NotFound,
   },
 ];
 
