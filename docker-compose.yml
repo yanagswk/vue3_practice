@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   node14:
     build: .
@@ -11,3 +11,13 @@ services:
       - ./frontend:/frontend
     # environment:
     # - CHOKIDAR_USEPOLLING=true  # ホットリロード有効化
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./backend/app:/app
