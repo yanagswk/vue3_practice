@@ -4,6 +4,9 @@ import router from "./router";
 import store from "./store";
 // import './assets/styles/index.css'
 import "./index.css";
+import axios from "axios";
+import VueAxios from "vue-axios";
+// import AxiosPlugin from "./axios";
 
 // Font Awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -21,4 +24,10 @@ import "startbootstrap-sb-admin/src/scss/styles.scss";
 library.add(fas);
 dom.watch();
 
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(store).use(router).mount("#app");
+createApp(App)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .use(store)
+  .use(router)
+  .use(VueAxios, axios)
+  .mount("#app");
+// .use(AxiosPlugin)

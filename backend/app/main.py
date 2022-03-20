@@ -22,6 +22,20 @@ def index1():
 def index2():
     return {"message": "fugafuga"}
 
+@app.get("/api/todo_list")
+def getTodoList():
+    return [
+        {
+            "id"    : 1,
+            "title" : "起きる",
+            "done"  : False
+        },
+        {
+            "id"    : 2,
+            "title" : "着替える",
+            "done"  : False
+        }
+    ]
 
 # Dockerfileからuvicorn(FastAPIサーバー）を起動する
 if __name__ == "__main__":
