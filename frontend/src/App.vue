@@ -53,6 +53,16 @@ const menuItems: MenuItem[] = [
     icon: "fa-list",
     url: "/todo",
   },
+  {
+    type: "menu",
+    title: "CounterApp",
+    url: "/counter",
+  },
+  {
+    type: "menu",
+    title: "Gallary",
+    url: "/gallary",
+  },
 ];
 </script>
 

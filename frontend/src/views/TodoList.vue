@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive, onMounted, ref } from "vue";
-import { Task } from "@/models/TodoList/Task";
+import { Task } from "@/models/Task";
 import TaskList from "@/components/TodoList/TaskList.vue";
 import TaskAdd from "@/components/TodoList/TaskAdd.vue";
 import axios from "@/axios";

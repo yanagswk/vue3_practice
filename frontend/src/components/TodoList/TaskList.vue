@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Task } from "@/models/TodoList/Task";
+import { Task } from "@/models/Task";
 
 defineProps<{
-  tasks: Task[];
+  tasks?: Task[];
 }>();
 
 const emit = defineEmits<{
@@ -36,7 +36,8 @@ const emit = defineEmits<{
           </td>
           <td>
             <button type="button" class="btn btn-danger" @click="emit('delete', task.id)">
-              <i class="fas fa-trash-alt"></i>
+              <!-- <i class="fas fa-trash-alt"></i> -->
+              削除
             </button>
           </td>
         </tr>

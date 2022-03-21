@@ -13,7 +13,10 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 
 // タイトルとメニューアイテムを設定できるようにする
-defineProps<{ title: string; menuItems: MenuItem[] }>();
+defineProps<{
+  title: string;
+  menuItems: MenuItem[];
+}>();
 
 const router = useRouter();
 

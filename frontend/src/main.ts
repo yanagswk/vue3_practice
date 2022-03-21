@@ -10,7 +10,7 @@ import VueAxios from "vue-axios";
 
 // Font Awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
+// import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { dom } from "@fortawesome/fontawesome-svg-core";
 
@@ -21,7 +21,7 @@ import "startbootstrap-sb-admin/src/scss/styles.scss";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 // アイコンをライブラリに追加して、DOM経由(class)で参照できるようにする。
-library.add(fas);
+// library.add(fas);
 dom.watch();
 
 createApp(App)
