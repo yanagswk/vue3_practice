@@ -9,5 +9,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
-  "cSpell.words": ["axios"]
+  "cSpell.words": ["axios", "Tetorisu"],
+  "editor.tabSize": 2
 }

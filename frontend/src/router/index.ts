@@ -4,6 +4,8 @@ import TodoList from "../views/TodoList.vue";
 import NotFound from "../components/NotFound.vue";
 import AppHome from "../views/AppHome.vue";
 import Counter from "../views/Counter.vue";
+import Tetorisu from "../views/Tetorisu.vue";
+import PlayPage from "../views/PlayPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -27,6 +29,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/counter",
     name: "Counter",
     component: Counter,
+  },
+  {
+    path: "/tetorisu",
+    name: "Tetorisu",
+    component: Tetorisu,
+  },
+  {
+    path: "/playPage",
+    name: "PlayPage",
+    component: PlayPage,
   },
   {
     path: "/:pathMatch(.*)*",
