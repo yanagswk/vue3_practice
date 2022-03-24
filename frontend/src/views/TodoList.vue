@@ -4,6 +4,8 @@ import { Task } from "@/models/Task";
 import TaskList from "@/components/TodoList/TaskList.vue";
 import TaskAdd from "@/components/TodoList/TaskAdd.vue";
 import axios from "@/axios";
+import { AxiosPromise } from "axios";
+import { getTodoList } from "@/api/index";
 
 const apiTask = ref<Task[]>();
 
@@ -39,22 +41,11 @@ const deleteTask = (id: number) => {
 };
 
 /**
- * TodoList取得
- */
-const getTodoList: () => Promise<Task[]> = async () => {
-  const res = await axios.get("api/todo_list");
-  return res.data;
-};
-// const getTodoList = () => {
-//   return axios.get("api/todo_list");
-// };
-
-/**
  * マウント
  */
 onMounted(async () => {
   const todoList = await getTodoList();
-  apiTask.value = todoList;
+  apiTask.value = todoList.data;
 });
 </script>
 

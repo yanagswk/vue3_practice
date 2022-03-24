@@ -2,21 +2,16 @@
 import { ref, computed, onMounted } from "vue";
 import GalleryCard from "@/components/gallary/GalleryCard.vue";
 import { Gallery } from "@/models/Gallery";
-import axios from "@/axios";
+import { getGalleryList } from "@/api/index";
 
 const apiGallery = ref<Gallery[]>();
-
-const getGalleryList = async () => {
-  const res = await axios.get("api/gallery_list");
-  return res.data;
-};
 
 /**
  * マウント
  */
 onMounted(async () => {
   const galleryList = await getGalleryList();
-  apiGallery.value = galleryList;
+  apiGallery.value = galleryList.data;
 });
 </script>
 

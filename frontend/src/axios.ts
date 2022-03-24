@@ -10,4 +10,13 @@ const apiClient: AxiosInstance = axios.create({
   },
 });
 
+apiClient.interceptors.response.use(
+  (response) => response, // 成功時レスポンス
+  // (error) => error.response || error // https://github.com/ynzy/vue3-h5-template/blob/main/src/utils/request.ts
+  (error) => {
+    console.log(error);
+    return error.response || error;
+  }
+); // エラーで認証(ログイン)してるかを見る
+
 export default apiClient;
