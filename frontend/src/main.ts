@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
+import { key, store } from "./store/index";
 // import './assets/styles/index.css'
 import "./index.css";
 import axios from "axios";
@@ -26,7 +26,7 @@ dom.watch();
 
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
-  .use(store)
+  .use(store, key)
   .use(router)
   .use(VueAxios, axios)
   .mount("#app");

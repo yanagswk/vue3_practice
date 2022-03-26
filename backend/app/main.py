@@ -69,6 +69,17 @@ def getGalleryList():
         },
     ]
 
+@app.get("/api/vuex_todo_items")
+def getVuexTodoItems():
+    return [
+        {
+            "id": 1,
+            "title": "foo",
+            "content": "bar",
+            "completed": True,
+        },
+    ]
+
 # Dockerfileからuvicorn(FastAPIサーバー）を起動する
 if __name__ == "__main__":
     uvicorn.run(

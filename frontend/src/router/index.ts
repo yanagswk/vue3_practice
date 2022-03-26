@@ -6,6 +6,7 @@ import AppHome from "../views/AppHome.vue";
 import Counter from "../views/Counter.vue";
 import Tetorisu from "../views/Tetorisu.vue";
 import PlayPage from "../views/PlayPage.vue";
+import VuexTodoList from "../views/VuexTodoList.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,6 +25,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/todo",
     name: "Todo",
     component: TodoList,
+  },
+  {
+    path: "/vuextodolist",
+    name: "VuexTodoList",
+    component: VuexTodoList,
   },
   {
     path: "/counter",

@@ -28,6 +28,11 @@ const menuItems: MenuItem[] = [
     title: "Tetorisu",
     url: "/Tetorisu",
   },
+  {
+    type: "menu",
+    title: "vuexTodo",
+    url: "/vuextodolist",
+  },
 ];
 </script>
 
