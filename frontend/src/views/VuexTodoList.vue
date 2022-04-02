@@ -7,7 +7,8 @@ import * as ActionTypes from "@/store/actinonTypes";
 // ストア本体
 const store = useStore();
 
-// const todoItems = computed(() => store.state.todoItems);
+// ↓vuexのgetterは型がきかないからstoreで取得
+// const gettersTodoItems = computed(() => store.getters.completedTodoItems);
 
 onMounted(async () => {
   await store.dispatch(ActionTypes.INITIALIZE_TODO_ITEMS);
@@ -16,7 +17,7 @@ onMounted(async () => {
 
 <template>
   <div>
-    <!-- <div v-for="item in todoItems" :key="item.id"> -->
+    <!-- <div v-for="item in gettersTodoItems" :key="item.id"> -->
     <div v-for="item in store.state.todoItems" :key="item.id">
       <p>{{ item.title }}</p>
       <p>{{ item.content }}</p>

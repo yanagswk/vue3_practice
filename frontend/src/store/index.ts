@@ -24,6 +24,11 @@ export const store = createStore<State>({
   state: {
     todoItems: [],
   },
+  getters: {
+    completedTodoItems: (store) => {
+      return store.todoItems.filter((todo) => todo.completed);
+    },
+  },
   mutations: {
     [MutationTypes.ADD_TODO_ITEM](state, todoItems: TodoItem) {
       state.todoItems.push(todoItems);

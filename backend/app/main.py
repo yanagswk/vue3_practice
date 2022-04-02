@@ -78,6 +78,18 @@ def getVuexTodoItems():
             "content": "bar",
             "completed": True,
         },
+        {
+            "id": 2,
+            "title": "aoo",
+            "content": "aar",
+            "completed": False,
+        },
+        {
+            "id": 3,
+            "title": "boo",
+            "content": "car",
+            "completed": True,
+        },
     ]
 
 # Dockerfileからuvicorn(FastAPIサーバー）を起動する
